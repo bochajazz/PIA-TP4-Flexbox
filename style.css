@@ -1,0 +1,177 @@
+body{
+    background: rgb(237,237,237);
+    background: -moz-linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(168,171,171,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(168,171,171,1) 100%);
+    background: linear-gradient(0deg, rgba(237,237,237,1) 0%, rgba(168,171,171,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ededed",endColorstr="#a8abab",GradientType=1); 
+    font-family: "Courier New", "Lucida Console", monospace;
+    margin: 0;
+    padding: 0;  
+}
+
+/* Header */
+.header {
+    background-color: #747373;
+    border-radius: 0px 0px 45px 45px;
+    color: aliceblue;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px; /* Añade un pequeño margen interior en el contenedor */
+  gap: 10px; /* Espacio entre artículos */
+}
+
+/* Artículos */
+.articulos {
+    background: rgba(250, 248, 248, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    flex: 1 1 calc(30% - 20px); /* Toma el 30% del ancho con espacio para los márgenes */
+    box-sizing: border-box;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Efecto de hover en etiquetas strong */
+strong {
+    transition: color 0.3s ease;
+}
+
+/* Cambia el color al hacer hover */
+strong:hover {
+    color: #32a852; /* Color verde estilizado */
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    }
+
+/* Imágenes dentro de los artículos */
+    .div_img {
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+       
+        }        
+     
+
+    .img_full {
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    }
+
+    /* Efecto de hover */
+    img:hover {
+    transform: scale(1.05); /* Hace que la imagen crezca un 5% */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra suave */
+}
+
+  /* Footer */
+footer {
+    background-color: #747373;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 45px 45px 0px 0px;
+    margin-top: 20px;
+}
+
+.container_sub {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content_sub {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content_sub h2, .content_sub p {
+    color: #fff;
+}
+
+.content_sub form {
+    display: flex;
+    max-width: 440px;
+    width: 100%;
+}
+
+.campo {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 3px 0px 0px 3px;
+    outline: none;
+    border: none;
+}
+
+.btn_sub {
+    padding: 15px;
+    background: #68c3a3;
+    color: white;
+    border-radius: 0px 3px 3px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn_sub:hover {
+    background: #3aba8f;
+}
+
+
+/* Responsive design: */
+
+/* Pantallas grandes (más de 900px) */
+@media (min-width: 901px) {
+    .articulos {
+        flex: 1 1 calc(33.333% - 20px); /* Tres columnas */
+    }
+}
+
+/* Pantallas medianas (600px a 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    .articulos {
+        flex: 1 1 calc(50% - 20px); /* Dos columnas */
+    }
+    .articulos img {
+        max-width: 90%; /* Ajusta el tamaño de la imagen para adaptarse mejor */
+    }
+    .articulos p {
+        font-size: 16px; /* Texto más pequeño para pantallas medianas */
+    }
+}
+
+/* Pantallas pequeñas (menos de 600px) */
+@media (max-width: 599px) {
+    .articulos {
+        flex: 1 1 100%; /* Una columna */
+    }
+    .articulos img {
+        max-width: 80%; /* Ajusta el tamaño de la imagen */
+    }
+    .articulos p {
+        font-size: 14px; /* Texto más pequeño para pantallas pequeñas */
+    }
+    .header h1 {
+        font-size: 18px; /* Texto más pequeño en el encabezado para pantallas pequeñas */
+    }
+}
