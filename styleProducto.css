@@ -170,16 +170,36 @@ td {
 
 /* Pantallas pequeñas (menos de 600px) */
 @media (max-width: 599px) {
-    .articulos {
+    .container {
         flex: 1 1 100%; /* Una columna */
     }
-    .articulos img {
+    .container img {
         max-width: 80%; /* Ajusta el tamaño de la imagen */
     }
-    .articulos p {
-        font-size: 14px; /* Texto más pequeño para pantallas pequeñas */
+    .container p {
+        font-size: 13px; /* Texto más pequeño para pantallas pequeñas */
     }
     .header h1 {
         font-size: 18px; /* Texto más pequeño en el encabezado para pantallas pequeñas */
     }
-}
+     /* Ajustes para la tabla dentro del container */
+     .container table {
+        width: 100%; /* Asegúrate de que la tabla use todo el ancho disponible */
+        table-layout: fixed; /* Para que las celdas se ajusten de manera uniforme */
+        word-wrap: break-word; /* Asegura que el texto largo se ajuste */
+        font-size: 14px; /* Tamaño de fuente más pequeño */
+    }
+    /* Ajusta el tamaño de las celdas para evitar desbordamiento */
+    .container table th, 
+    .container table td {
+        padding: 7px; /* Reduce el padding para pantallas pequeñas */
+        word-wrap: break-word; /* Permite que el contenido largo se ajuste */
+    }
+    .content_sub h2 {
+        font-size: 16px; /* Texto más pequeño en el encabezado para pantallas pequeñas */
+        padding-top: 10px;
+    }
+    .content_sub p {
+        font-size: 14px; /* Texto más pequeño en el encabezado para pantallas pequeñas */
+    }
+   }
